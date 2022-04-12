@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo OAuth 2.0 IONAPI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .jumbotron {
+          margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <%- include('partials/navbar') %>
+        <div class="jumbotron">
+            <table align="center">
+                <tr> 
+                    <td><img src="/image/infor.png" width="280px" height="237px"/></td>
+                    <td><img src="../image/nodejs.png" /></td>
+                </tr>                    
+            </table>    
+
+                <table class="table">
+                    <tr>
+                        <td>Access_Token</td>
+                        <td><%=outMessage.access_token%></td>
+                    </tr>
+                    <tr>
+                        <td>Expires</td>
+                        <td><%=outMessage.expires_in%></td>
+                    </tr>
+                    <tr>
+                        <td>Token_Type</td>
+                        <td><%=outMessage.token_type%></td>
+                    </tr>
+                    <tr>
+                        <td>Refresh_Token</td>
+                        <td><%=outMessage.refresh_token%></td>
+                    </tr>
+                </table>
+        </div>
+        <%- include('partials/footer') %>
+    </div>   
+</body>   
+</html>
