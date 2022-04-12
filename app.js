@@ -120,13 +120,13 @@ app.post('/connect', function(req,res){
             localStorage.setItem('v_' + api , obj.v);
             console.log('obj.ru :' + obj.ru )
             if (obj.ru === undefined || obj.ru === null || obj.ru ===''){
-                obj.ru = 'https://'+fqdn+ '/redirect.html';
+                obj.ru = 'https://ionapi.herokuapp.com/redirect.html';
                 localStorage.setItem('ru_' + api , obj.ru);
             }else{
                 localStorage.setItem('ru_' + api , obj.ru);
             }            
          }
-         var url = obj.pu + obj.oa + '?client_id=' + obj.ci + '&response_type=code&redirect_uri=https://'+fqdn+'/redirect.html';
+         var url = obj.pu + obj.oa + '?client_id=' + obj.ci + '&response_type=code&redirect_uri=https://ionapi.herokuapp.com/redirect.html';
          res.redirect(url);
         })
 });
