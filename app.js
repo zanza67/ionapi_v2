@@ -139,7 +139,7 @@ app.post('/access', function(req,res){
     let code = req.body.code;
     let api  = localStorage.getItem('api');
     console.log('code ' + code);
-    var redirectUri = "http://localhost:3000/redirect.html";
+    var redirectUri = "https://ionapi.herokuapp.com/redirect.html";
 
     // Prepare data for request the access token
     var args =  {
